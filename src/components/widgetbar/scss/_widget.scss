@@ -1,0 +1,12 @@
+@import '../../../scss/tokens';
+@import './tokens/default';
+
+.react-widget {
+  width: 340px;
+  min-height: 100vh;
+  background-color: $react-color-white-background-default;
+
+  &__header {
+    padding: $react-widget-spacing-padding;
+  }
+}

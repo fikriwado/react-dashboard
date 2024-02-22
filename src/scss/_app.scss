@@ -1,0 +1,14 @@
+@import 'tokens';
+
+body {
+  background-color: $react-color-purple-background-low;
+}
+
+.react-app {
+  display: flex;
+}
+
+.react-content {
+  flex: 1;
+  padding: $react-spacing-ms $react-spacing-m;
+}
