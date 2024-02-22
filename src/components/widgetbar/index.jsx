@@ -1,4 +1,4 @@
-import './scss/_widget.scss'
+import './scss/_widgetbar.scss'
 
 const Index = () => {
   return (

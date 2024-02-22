@@ -3,8 +3,8 @@
 
 .react-widget {
   width: 340px;
-  min-height: 100vh;
-  background-color: $react-color-white-background-default;
+  // min-height: 100vh;
+  background-color: $react-color-white-default;
 
   &__header {
     padding: $react-widget-spacing-padding;

@@ -1,12 +1,125 @@
 @import '../../../scss/tokens';
 @import './tokens/default';
+@import './sidebar-mixins';
 
 .react-sidebar {
-  width: 100px;
-  min-height: 100vh;
-  background-color: $react-color-white-background-default;
+  --react-header-logo-text: #{$react-sidebar-header-logo-text};
+  --react-sidebar-header-logo-color-text: #{$react-sidebar-header-logo-color-text};
+  --react-menu-item-color: #{$react-color-dark-default};
+  --react-sidebar-content-menus-color-background: #{$react-sidebar-content-menus-color-background};
+  --react-sidebar-content-menus-size: #{$react-sidebar-content-menus-size};
+  --react-sidebar-content-menus-border-radius: #{$react-sidebar-content-menus-border-radius};
 
-  &__header {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  bottom: 0;
+  height: 100dvh;
+  background-color: $react-color-white-default;
+  box-sizing: border-box;
+  &__header,
+  &__content,
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: $react-sidebar-spacing-padding;
+    box-sizing: border-box;
+  }
+  &__header .react-sidebar__header--logo,
+  &__footer .react-sidebar__footer--item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $react-size-100;
+    height: $react-size-100;
+    border-radius: 100%;
+    background-color: $react-color-purple-low;
+  }
+  &__header {
+    &--logo {
+      a {
+        text-decoration: none;
+        color: var(--react-sidebar-header-logo-color-text);
+        font-size: var(--react-header-logo-text);
+        font-weight: 700;
+      }
+    }
+  }
+  &__content {
+    &--menus {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: var(--react-sidebar-content-menus-size);
+      background-color: var(--react-sidebar-content-menus-color-background);
+      border-radius: var(--react-sidebar-content-menus-border-radius);
+    }
+    &--item {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: var(--react-sidebar-content-menus-size);
+      height: var(--react-sidebar-content-menus-size);
+      border-radius: 50%;
+      background-color: var(--react-menu-item-background);
+      color: var(--react-menu-item-color);
+      transition: 0.3s;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      &:hover {
+        --react-menu-item-color: #{$react-color-purple-high};
+        .react-sidebar__content--item-name {
+          --item-scale: 1;
+          --item-visibility: visible;
+          transition-delay: unset;
+        }
+      }
+      &.active {
+        --react-menu-item-color: #{$react-color-white-default};
+        --react-menu-item-background: #{$react-color-purple-high};
+      }
+
+      &-name {
+        @include menu-item-hidden(10px);
+      }
+    }
+  }
+  &__footer {
+    margin-bottom: $react-size-100;
+    &--item {
+      position: relative;
+      color: var(--react-menu-item-color);
+      transition: 0.3s;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      &:hover {
+        .react-sidebar__footer--item-name {
+          --item-scale: 1;
+          --item-visibility: visible;
+          transition-delay: unset;
+        }
+      }
+      &:has(.react-sidebar__footer--item-img):hover {
+        transform: translateY(-4px);
+      }
+      a {
+        line-height: 0;
+      }
+      &-img {
+        width: 100%;
+        height: auto;
+        border-radius: 100%;
+      }
+      &-name {
+        @include menu-item-hidden(18px);
+      }
+    }
   }
 }

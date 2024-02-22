@@ -3,10 +3,7 @@ import App from '../App'
 const Dashboard = () => {
   return (
     <App>
-      <div>asda</div>
-      <div>asda</div>
-      <div>asda</div>
-      <div>asda</div>
+      <div>Dashboard</div>
     </App>
   )
 }

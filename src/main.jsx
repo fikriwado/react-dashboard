@@ -2,7 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './scss/_global.scss'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { Dashboard, Notification } from './pages'
+import {
+  Dashboard,
+  Notification,
+  Schedule,
+  Users,
+  Wallet,
+  Setting
+} from './pages'
 
 const router = createBrowserRouter([
   {
@@ -12,6 +19,22 @@ const router = createBrowserRouter([
   {
     path: 'notification',
     element: <Notification />
+  },
+  {
+    path: 'schedule',
+    element: <Schedule />
+  },
+  {
+    path: 'users',
+    element: <Users />
+  },
+  {
+    path: 'wallet',
+    element: <Wallet />
+  },
+  {
+    path: 'setting',
+    element: <Setting />
   }
 ])
 

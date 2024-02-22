@@ -1,5 +1,11 @@
+import App from '../App'
+
 const Notification = () => {
-  return <div>notif</div>
+  return (
+    <App>
+      <div>Notification</div>
+    </App>
+  )
 }
 
 export default Notification

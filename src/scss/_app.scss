@@ -1,7 +1,9 @@
 @import 'tokens';
 
 body {
-  background-color: $react-color-purple-background-low;
+  background-color: $react-color-purple-low;
+  color: $react-color-dark-default;
+  height: -webkit-fill-available;
 }
 
 .react-app {

@@ -1,0 +1,7 @@
+@import '../../../scss/tokens';
+@import './tokens/default';
+
+.react-devider {
+  margin: $react-devider-spacing-margin;
+  border-bottom: 1px solid #eeebeb;
+}
