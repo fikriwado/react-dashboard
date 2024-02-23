@@ -6,7 +6,7 @@
 .react-sidebar {
   --react-header-logo-text: #{$react-sidebar-header-logo-text};
   --react-sidebar-header-logo-color-text: #{$react-sidebar-header-logo-color-text};
-  --react-menu-item-color: #{$react-color-dark-default};
+  --react-menu-item-color: #{$react-color-dark-high};
   --react-sidebar-content-menus-color-background: #{$react-sidebar-content-menus-color-background};
   --react-sidebar-content-menus-size: #{$react-sidebar-content-menus-size};
   --react-sidebar-content-menus-border-radius: #{$react-sidebar-content-menus-border-radius};
@@ -22,12 +22,17 @@
   background-color: $react-color-white-default;
   box-sizing: border-box;
   transition: 0.3s;
+  padding: calc($react-spacing-xl - $react-spacing-ms) 0;
+  @include tablet {
+    padding: calc($react-spacing-l - $react-spacing-ms) 0;
+  }
   @include mobile {
     position: absolute;
     top: auto;
     transform: translateX(-88px);
     height: calc($react-sidebar-height - 68px);
     justify-content: space-around;
+    padding: calc($react-spacing-m - $react-spacing-ms) 0;
 
     &.active {
       transform: translateX(0);
@@ -78,6 +83,9 @@
       width: var(--react-sidebar-content-menus-size);
       background-color: var(--react-sidebar-content-menus-color-background);
       border-radius: var(--react-sidebar-content-menus-border-radius);
+      & > :not(:last-child) {
+        margin-bottom: $react-size-20;
+      }
     }
     &--item {
       position: relative;
@@ -90,9 +98,6 @@
       background-color: var(--react-menu-item-background);
       color: var(--react-menu-item-color);
       transition: 0.3s;
-      &:not(:last-child) {
-        margin-bottom: 10px;
-      }
 
       &:hover {
         --react-menu-item-color: #{$react-color-purple-high};
@@ -114,7 +119,7 @@
   }
   &__footer {
     @include tablet {
-      margin-bottom: $react-size-100;
+      margin-bottom: $react-size-80;
     }
     &--item {
       position: relative;
@@ -124,6 +129,7 @@
         margin-bottom: 10px;
       }
       &:hover {
+        --react-menu-item-color: #{$react-color-purple-high};
         .react-sidebar__footer--item-name {
           --item-scale: 1;
           --item-visibility: visible;

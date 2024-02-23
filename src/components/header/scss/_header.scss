@@ -1,0 +1,26 @@
+@import '../../../scss/tokens';
+
+.react-header {
+  display: flex;
+  &__left,
+  &__right {
+    flex: 1;
+  }
+  &__left {
+    &--title {
+      font-weight: 600;
+      font-size: $react-font-size-80;
+    }
+    &--desc {
+      color: $react-color-dark-med;
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    & > :not(:last-child) {
+      margin-right: $react-size-20;
+    }
+  }
+}

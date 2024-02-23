@@ -3,7 +3,7 @@
 
 body {
   background-color: $react-color-purple-low;
-  color: $react-color-dark-default;
+  color: $react-color-dark-high;
   height: -webkit-fill-available;
 }
 
@@ -15,5 +15,14 @@ body {
 
 .react-content {
   flex: 1;
-  padding: $react-spacing-ms $react-spacing-m;
+  padding: $react-spacing-xl;
+  @include tablet {
+    padding: $react-spacing-l;
+  }
+  @include mobile {
+    padding: $react-spacing-m;
+  }
+  & > :not(:last-child) {
+    margin-bottom: $react-size-60;
+  }
 }

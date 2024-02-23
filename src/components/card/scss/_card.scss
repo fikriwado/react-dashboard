@@ -4,23 +4,24 @@
 .react-card {
   background-color: $react-color-white-default;
   padding: $react-card-spacing-padding;
-  border: 2px solid $react-color-gray-default;
   border-radius: $react-size-30;
-
+  &.r-has-border {
+    border: 2px solid $react-color-gray-default;
+  }
   &__title {
     margin-bottom: $react-spacing-s;
-    &--medium,
-    &--large {
+    &.r-medium,
+    &.r-large {
       font-weight: 600;
     }
-    &--small {
+    &.r-small {
       font-size: $react-font-size-30;
       font-weight: 500;
     }
-    &--medium {
+    &.r-medium {
       font-size: $react-font-size-40;
     }
-    &--large {
+    &.r-large {
       font-size: $react-font-size-50;
     }
   }

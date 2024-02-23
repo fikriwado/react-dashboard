@@ -4,7 +4,7 @@ import Card from '../card'
 const Index = () => {
   return (
     <div className='react-widget'>
-      <Card>
+      <Card hasBorder>
         <Card.Title size='large'>Expenses and income</Card.Title>
         <Card.Body>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
@@ -12,7 +12,7 @@ const Index = () => {
         </Card.Body>
       </Card>
 
-      <Card>
+      <Card hasBorder>
         <Card.Title size='large'>Latest spending</Card.Title>
         <Card.Body>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident
@@ -21,7 +21,7 @@ const Index = () => {
         </Card.Body>
       </Card>
 
-      <Card>
+      <Card hasBorder>
         <Card.Title size='small' align='center'>
           Go to premium
         </Card.Title>

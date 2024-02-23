@@ -1,16 +1,20 @@
 import './scss/_card.scss'
 
-const Index = ({ children }) => <div className='react-card'>{children}</div>
+const Index = ({ children, hasBorder }) => (
+  <div className={`react-card ${hasBorder ? 'r-has-border' : ''}`}>
+    {children}
+  </div>
+)
 
 const Title = ({ children, size = 'medium', align }) => {
-  const headingSize = `react-card__title--${size}`
-  return (
-    <div className='react-card__title'>
-      <h1 className={`${headingSize} ${align ? `r-text-center` : ''}`}>
-        {children}
-      </h1>
-    </div>
-  )
+  const cardTitleClasses = []
+
+  if (size) cardTitleClasses.push(`r-${size}`)
+  if (align) cardTitleClasses.push(`r-text-${align}`)
+
+  const classNames = Object.values(cardTitleClasses).join(' ')
+
+  return <div className={`react-card__title ${classNames}`}>{children}</div>
 }
 
 const Body = ({ children }) => (

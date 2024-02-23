@@ -1,0 +1,31 @@
+@import '../../../scss/tokens';
+
+.react-button {
+  --react-button-width: #{$react-size-90};
+  --react-button-height: #{$react-size-90};
+  --react-button-border-radius: #{$react-size-20};
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--react-button-width);
+  height: var(--react-button-height);
+  background-color: var(--react-button-background);
+  border-radius: var(--react-button-border-radius);
+  border-color: transparent;
+  transition: 0.3s;
+  cursor: pointer;
+  &.r-large {
+    --react-button-width: #{$react-size-100};
+    --react-button-height: #{$react-size-100};
+  }
+  &.r-circle {
+    --react-button-border-radius: 100%;
+  }
+  &.r-white {
+    --react-button-background: #{$react-color-white-default};
+    &:hover {
+      --react-button-background: #{$react-color-gray-default};
+    }
+  }
+}

@@ -8,15 +8,15 @@
   width: 380px;
   background-color: $react-color-white-default;
   box-sizing: border-box;
-  padding: $react-widget-spacing-padding;
+  padding: $react-widget-spacing-padding-desktop;
   & > :not(:last-child) {
     margin-bottom: $react-size-60;
   }
+  @include tablet {
+    padding: $react-widget-spacing-padding-tablet;
+  }
   @include mobile {
     display: none;
-  }
-
-  &__header {
-    padding: $react-widget-spacing-padding;
+    padding: $react-widget-spacing-padding-mobile;
   }
 }
