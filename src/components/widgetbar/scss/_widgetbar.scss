@@ -3,10 +3,15 @@
 @import './tokens/default';
 
 .react-widget {
-  width: 340px;
-  // min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 380px;
   background-color: $react-color-white-default;
-
+  box-sizing: border-box;
+  padding: $react-widget-spacing-padding;
+  & > :not(:last-child) {
+    margin-bottom: $react-size-60;
+  }
   @include mobile {
     display: none;
   }
