@@ -1,0 +1,9 @@
+@mixin item-navbar($background) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $react-size-90;
+  height: $react-size-90;
+  border-radius: 100%;
+  background-color: $background;
+}

@@ -1,0 +1,41 @@
+@import '../../../scss/responsive-mixin-helper';
+@import '../../../scss/tokens';
+@import './tokens/default';
+@import './tokens/navbar-mixins';
+
+.react-navbar {
+  --react-navbar-logo-text: #{$react-navbar-logo-text};
+  --react-navbar-logo-color-text: #{$react-navbar-logo-color-text};
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $react-color-white-default;
+  padding: $react-navbar-spacing-padding;
+
+  @include tablet {
+    display: none;
+  }
+
+  &__brand {
+    &--logo {
+      @include item-navbar($react-color-purple-low);
+      a {
+        text-decoration: none;
+        color: var(--react-navbar-logo-color-text);
+        font-size: var(--react-navbar-logo-text);
+        font-weight: 700;
+      }
+    }
+  }
+  &__toggle {
+    @include item-navbar(transparent);
+    color: $react-color-purple-high;
+    border: 2px solid transparent;
+    transition: 0.3s;
+    &:hover {
+      background-color: $react-color-purple-low;
+      border-color: $react-color-purple-med;
+    }
+  }
+}

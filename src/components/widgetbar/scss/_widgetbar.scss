@@ -1,3 +1,4 @@
+@import '../../../scss/responsive-mixin-helper';
 @import '../../../scss/tokens';
 @import './tokens/default';
 
@@ -5,6 +6,10 @@
   width: 340px;
   // min-height: 100vh;
   background-color: $react-color-white-default;
+
+  @include mobile {
+    display: none;
+  }
 
   &__header {
     padding: $react-widget-spacing-padding;

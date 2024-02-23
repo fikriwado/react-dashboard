@@ -1,3 +1,4 @@
+@import '../../../scss/responsive-mixin-helper';
 @import '../../../scss/tokens';
 @import './tokens/default';
 @import './sidebar-mixins';
@@ -16,9 +17,22 @@
   justify-content: space-between;
   top: 0;
   bottom: 0;
-  height: 100dvh;
+  width: var(--react-sidebar-width);
+  height: $react-sidebar-height;
   background-color: $react-color-white-default;
   box-sizing: border-box;
+  transition: 0.3s;
+  @include mobile {
+    position: absolute;
+    top: auto;
+    transform: translateX(-88px);
+    height: calc($react-sidebar-height - 68px);
+    justify-content: space-around;
+
+    &.active {
+      transform: translateX(0);
+    }
+  }
   &__header,
   &__content,
   &__footer {
@@ -37,8 +51,16 @@
     height: $react-size-100;
     border-radius: 100%;
     background-color: $react-color-purple-low;
+
+    @include mobile {
+      width: $react-size-90;
+      height: $react-size-90;
+    }
   }
   &__header {
+    @include mobile {
+      display: none;
+    }
     &--logo {
       a {
         text-decoration: none;
@@ -91,7 +113,9 @@
     }
   }
   &__footer {
-    margin-bottom: $react-size-100;
+    @include tablet {
+      margin-bottom: $react-size-100;
+    }
     &--item {
       position: relative;
       color: var(--react-menu-item-color);

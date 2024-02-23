@@ -1,12 +1,12 @@
 import './scss/_sidebar.scss'
 import { Link, NavLink } from 'react-router-dom'
-import { IconLogout } from '@tabler/icons-react'
+import { IconLogout, IconAlertTriangleFilled } from '@tabler/icons-react'
 import { menus } from '../../constants'
 import { avatar01 } from '../../assets'
 
-const Index = () => {
+const Index = ({ mobileToggle }) => {
   return (
-    <div className='react-sidebar'>
+    <div className={`react-sidebar ${mobileToggle ? 'active' : ''}`}>
       <div className='react-sidebar__header'>
         <div className='react-sidebar__header--logo'>
           <Link to='/'>R</Link>
@@ -32,7 +32,12 @@ const Index = () => {
               )
             })
           ) : (
-            <div>kosong</div>
+            <div className='react-sidebar__content--item'>
+              <IconAlertTriangleFilled />
+              <div className='react-sidebar__content--item-name'>
+                Menu tidak ditemukan
+              </div>
+            </div>
           )}
         </div>
       </div>
