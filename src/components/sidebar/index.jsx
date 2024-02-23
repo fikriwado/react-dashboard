@@ -4,9 +4,9 @@ import { IconLogout, IconAlertTriangleFilled } from '@tabler/icons-react'
 import { menus } from '../../constants'
 import { avatar01 } from '../../assets'
 
-const Index = ({ mobileToggle }) => {
+const Index = ({ toggle }) => {
   return (
-    <div className={`react-sidebar ${mobileToggle ? 'active' : ''}`}>
+    <div className={`react-sidebar ${toggle ? 'active' : ''}`}>
       <div className='react-sidebar__header'>
         <div className='react-sidebar__header--logo'>
           <Link to='/'>R</Link>

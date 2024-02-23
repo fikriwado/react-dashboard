@@ -6,17 +6,36 @@
   display: flex;
   flex-direction: column;
   width: 380px;
+  height: 100dvh;
   background-color: $react-color-white-default;
   box-sizing: border-box;
   padding: $react-widget-spacing-padding-desktop;
+  transition: 0.3s;
   & > :not(:last-child) {
     margin-bottom: $react-size-60;
   }
-  @include tablet {
-    padding: $react-widget-spacing-padding-tablet;
-  }
   @include mobile {
     display: none;
-    padding: $react-widget-spacing-padding-mobile;
+  }
+  @include tablet {
+    position: absolute;
+    // top: 0;
+    right: -380px;
+    padding: $react-widget-spacing-padding-tablet;
+    &.r-active {
+      right: 0;
+    }
+  }
+  @include desktop {
+    position: sticky;
+    margin-right: -380px;
+    &.r-active {
+      margin-right: 0;
+    }
+  }
+  &__close--toggle {
+    @include desktop {
+      display: none;
+    }
   }
 }

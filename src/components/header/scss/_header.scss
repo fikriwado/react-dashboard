@@ -1,7 +1,11 @@
+@import '../../../scss/responsive-mixin-helper';
 @import '../../../scss/tokens';
 
 .react-header {
   display: flex;
+  @include mobile {
+    flex-direction: column-reverse;
+  }
   &__left,
   &__right {
     flex: 1;
@@ -21,6 +25,11 @@
     justify-content: end;
     & > :not(:last-child) {
       margin-right: $react-size-20;
+    }
+    &--toggle {
+      @include mobile {
+        display: none;
+      }
     }
   }
 }

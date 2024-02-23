@@ -10,6 +10,7 @@
   align-items: center;
   width: var(--react-button-width);
   height: var(--react-button-height);
+  color: var(--react-button-color);
   background-color: var(--react-button-background);
   border-radius: var(--react-button-border-radius);
   border-color: transparent;
@@ -24,6 +25,14 @@
   }
   &.r-white {
     --react-button-background: #{$react-color-white-default};
+    --react-button-color: #{$react-color-dark-high};
+    &:hover {
+      --react-button-background: #{$react-color-gray-default};
+    }
+  }
+  &.r-purple-low {
+    --react-button-background: #{$react-color-purple-low};
+    --react-button-color: #{$react-color-purple-high};
     &:hover {
       --react-button-background: #{$react-color-gray-default};
     }

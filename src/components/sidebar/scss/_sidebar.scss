@@ -30,9 +30,10 @@
     position: absolute;
     top: auto;
     transform: translateX(-88px);
-    height: calc($react-sidebar-height - 68px);
+    height: calc($react-sidebar-height - 76px);
     justify-content: space-around;
     padding: calc($react-spacing-m - $react-spacing-ms) 0;
+    border-top: 1px solid $react-color-gray-default;
 
     &.active {
       transform: translateX(0);

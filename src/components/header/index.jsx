@@ -1,8 +1,12 @@
 import './scss/_header.scss'
 import { IconSearch, IconMenu2 } from '@tabler/icons-react'
 import Button from '../button'
+import { WidgetContext } from '../../App'
+import { useContext } from 'react'
 
 const Index = ({ title, desc }) => {
+  const { toggleWidget } = useContext(WidgetContext)
+
   return (
     <div className='react-header'>
       <div className='react-header__left'>
@@ -13,9 +17,11 @@ const Index = ({ title, desc }) => {
         <Button color='white' isCircle>
           <IconSearch />
         </Button>
-        <Button color='white' isCircle>
-          <IconMenu2 />
-        </Button>
+        <div className='react-header__right--toggle'>
+          <Button color='white' isCircle onClick={toggleWidget}>
+            <IconMenu2 />
+          </Button>
+        </div>
       </div>
     </div>
   )

@@ -8,7 +8,9 @@ body {
 }
 
 .react-app {
+  overflow: hidden;
   @include tablet {
+    position: relative;
     display: flex;
   }
 }

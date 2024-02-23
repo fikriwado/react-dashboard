@@ -1,9 +1,16 @@
 import './scss/_widgetbar.scss'
 import Card from '../card'
+import Button from '../button'
+import { IconX } from '@tabler/icons-react'
 
-const Index = () => {
+const Index = ({ toggle, setWidgetToggle }) => {
   return (
-    <div className='react-widget'>
+    <div className={`react-widget ${toggle ? 'r-active' : ''}`}>
+      <div className='react-widget__close--toggle'>
+        <Button color='purple-low' isCircle onClick={setWidgetToggle}>
+          <IconX />
+        </Button>
+      </div>
       <Card hasBorder>
         <Card.Title size='large'>Expenses and income</Card.Title>
         <Card.Body>
@@ -11,7 +18,6 @@ const Index = () => {
           enim.
         </Card.Body>
       </Card>
-
       <Card hasBorder>
         <Card.Title size='large'>Latest spending</Card.Title>
         <Card.Body>
@@ -20,7 +26,6 @@ const Index = () => {
           tempore!
         </Card.Body>
       </Card>
-
       <Card hasBorder>
         <Card.Title size='small' align='center'>
           Go to premium

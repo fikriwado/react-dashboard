@@ -1,22 +1,34 @@
+import { createContext, useState } from 'react'
 import './scss/_app.scss'
 import Navbar from './components/navbar'
 import Sidebar from './components/sidebar'
 import Widgetbar from './components/widgetbar'
-import { useState } from 'react'
+
+export const WidgetContext = createContext()
 
 function App({ children }) {
+  const screenWidth = window.innerWidth
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const [isWidgetOpen, setIsWidgetOpen] = useState(
+    screenWidth >= 1200 ? true : false
+  )
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen)
   }
 
+  const toggleWidget = () => {
+    setIsWidgetOpen(!isWidgetOpen)
+  }
+
   return (
     <div className='react-app'>
       <Navbar setSidebarToggle={toggleSidebar} />
-      <Sidebar mobileToggle={isSidebarOpen} />
-      <div className='react-content'>{children}</div>
-      <Widgetbar />
+      <Sidebar toggle={isSidebarOpen} />
+      <WidgetContext.Provider value={{ toggleWidget }}>
+        <div className='react-content'>{children}</div>
+      </WidgetContext.Provider>
+      <Widgetbar toggle={isWidgetOpen} setWidgetToggle={toggleWidget} />
     </div>
   )
 }
