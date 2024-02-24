@@ -26,7 +26,11 @@ function App({ children }) {
       <Navbar setSidebarToggle={toggleSidebar} />
       <Sidebar toggle={isSidebarOpen} />
       <WidgetContext.Provider value={{ toggleWidget }}>
-        <div className='react-content'>{children}</div>
+        <div
+          className={`react-content ${!isWidgetOpen ? 'r-widget-close' : ''}`}
+        >
+          {children}
+        </div>
       </WidgetContext.Provider>
       <Widgetbar toggle={isWidgetOpen} setWidgetToggle={toggleWidget} />
     </div>

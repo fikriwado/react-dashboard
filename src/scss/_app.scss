@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 .react-app {
   overflow: hidden;
   @include tablet {
@@ -22,14 +26,23 @@ a {
 .react-content {
   flex: 1;
   padding: $react-spacing-xl;
-  @include tablet {
-    padding: $react-spacing-l;
-  }
+  transition: 0.3s;
   @include mobile {
     padding: $react-spacing-m;
+    margin-top: 76px;
+  }
+  @include tablet {
+    padding: $react-spacing-l;
+    margin-left: 88px;
+  }
+  @include desktop {
+    margin-right: 380px;
   }
   & > :not(:last-child) {
     margin-bottom: $react-size-60;
+  }
+  &.r-widget-close {
+    margin-right: 0;
   }
 }
 

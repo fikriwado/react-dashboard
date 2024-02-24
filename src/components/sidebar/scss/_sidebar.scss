@@ -11,7 +11,7 @@
   --react-sidebar-content-menus-size: #{$react-sidebar-content-menus-size};
   --react-sidebar-content-menus-border-radius: #{$react-sidebar-content-menus-border-radius};
 
-  position: sticky;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -27,7 +27,6 @@
     padding: calc($react-spacing-l - $react-spacing-ms) 0;
   }
   @include mobile {
-    position: absolute;
     top: auto;
     transform: translateX(-88px);
     height: calc($react-sidebar-height - 76px);

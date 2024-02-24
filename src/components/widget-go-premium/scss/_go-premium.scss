@@ -1,0 +1,23 @@
+@import '../../../scss/tokens';
+
+.react-go-premium {
+  & > :not(:last-child) {
+    margin-bottom: $react-spacing-m;
+  }
+  &__img {
+    width: $react-size-120;
+  }
+  &__text {
+    & > :not(:last-child) {
+      margin-bottom: calc($react-spacing-s / 2);
+    }
+  }
+  .label {
+    font-weight: 600;
+    font-size: $react-font-size-50;
+  }
+  .desc {
+    font-size: $react-font-size-30;
+    color: $react-color-gray-med;
+  }
+}

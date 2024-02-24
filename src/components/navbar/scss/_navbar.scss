@@ -7,7 +7,10 @@
   --react-navbar-logo-text: #{$react-navbar-logo-text};
   --react-navbar-logo-color-text: #{$react-navbar-logo-color-text};
 
+  position: fixed;
   display: flex;
+  width: 100%;
+  box-sizing: border-box;
   align-items: center;
   justify-content: space-between;
   background-color: $react-color-white-default;

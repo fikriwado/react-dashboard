@@ -6,11 +6,17 @@
   display: flex;
   flex-direction: column;
   width: 380px;
-  height: 100dvh;
   background-color: $react-color-white-default;
   box-sizing: border-box;
   padding: $react-widget-spacing-padding-desktop;
   transition: 0.3s;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  height: 100dvh;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
   & > :not(:last-child) {
     margin-bottom: $react-size-60;
   }
@@ -18,18 +24,13 @@
     display: none;
   }
   @include tablet {
-    position: absolute;
+    position: fixed;
+    top: 0;
+    bottom: 0;
     right: -380px;
     padding: $react-widget-spacing-padding-tablet;
     &.r-active {
       right: 0;
-    }
-  }
-  @include desktop {
-    position: sticky;
-    margin-right: -380px;
-    &.r-active {
-      margin-right: 0;
     }
   }
   &__close--toggle {

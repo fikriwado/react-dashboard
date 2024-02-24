@@ -1,8 +1,8 @@
 import './scss/_widgetbar.scss'
-import Card from '../card'
 import Button from '../button'
 import ExpenseIncome from '../widget-expense-income'
 import LatestSpending from '../widget-latest-spending'
+import GoPremium from '../widget-go-premium'
 import { IconX } from '@tabler/icons-react'
 
 const Index = ({ toggle, setWidgetToggle }) => {
@@ -15,16 +15,7 @@ const Index = ({ toggle, setWidgetToggle }) => {
       </div>
       <ExpenseIncome />
       <LatestSpending />
-      <Card hasBorder>
-        <Card.Title size='small' align='center'>
-          Go to premium
-        </Card.Title>
-        <Card.Body>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident
-          laboriosam, odio nihil ex facilis sed similique dignissimos rem sequi
-          tempore!
-        </Card.Body>
-      </Card>
+      <GoPremium />
     </div>
   )
 }
