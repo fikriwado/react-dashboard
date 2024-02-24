@@ -14,7 +14,7 @@ const Dashboard = () => {
         <div className='react-row'>
           <div className='react-dashboard__balance-statistics'>
             <Card>
-              <Card.Title>Example asd</Card.Title>
+              <Card.Title>Example</Card.Title>
               <Card.Body>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
                 suscipit mollitia facere debitis ut minus porro. Vitae quas
@@ -40,14 +40,14 @@ const Dashboard = () => {
           <Card hasOtherBody>
             <Card.MultiBody>
               <Card.Body>
-                <Card.Title>Example asd</Card.Title>
+                <Card.Title>Example</Card.Title>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
                 suscipit mollitia facere debitis ut minus porro. Vitae quas
                 quibusdam placeat. Porro perferendis laboriosam unde, non
                 dolores rem aut reprehenderit. Porro!
               </Card.Body>
               <Card.Body>
-                <Card.Title>Example asd</Card.Title>
+                <Card.Title>Example</Card.Title>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
                 suscipit mollitia facere debitis ut minus porro. Vitae quas
                 quibusdam placeat. Porro perferendis laboriosam unde, non
@@ -60,7 +60,7 @@ const Dashboard = () => {
         <div className='react-row'>
           <div className='react-dashboard__transaction'>
             <Card>
-              <Card.Title>Example asd</Card.Title>
+              <Card.Title>Example</Card.Title>
               <Card.Body>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
                 suscipit mollitia facere debitis ut minus porro. Vitae quas
