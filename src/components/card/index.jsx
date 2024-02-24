@@ -1,10 +1,23 @@
 import './scss/_card.scss'
 
-const Index = ({ children, hasBorder }) => (
-  <div className={`react-card ${hasBorder ? 'r-has-border' : ''}`}>
-    {children}
-  </div>
-)
+const Index = ({ children, hasBorder, backgroundImage, ...props }) => {
+  const cardClasses = []
+
+  if (hasBorder) cardClasses.push('r-has-border')
+  if (backgroundImage) cardClasses.push('r-background-image')
+
+  const classNames = Object.values(cardClasses).join(' ')
+
+  return (
+    <div
+      {...props}
+      className={`react-card ${classNames}`}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
+      {children}
+    </div>
+  )
+}
 
 const Title = ({ children, size = 'medium', align, hasAction }) => {
   const cardTitleClasses = []
@@ -18,8 +31,10 @@ const Title = ({ children, size = 'medium', align, hasAction }) => {
   return <div className={`react-card__title ${classNames}`}>{children}</div>
 }
 
-const Body = ({ children }) => (
-  <div className='react-card__body'>{children}</div>
+const Body = ({ children, hasNoSpace }) => (
+  <div className={`react-card__body ${hasNoSpace ? 'r-has-no-space' : ''}`}>
+    {children}
+  </div>
 )
 
 const MultiBody = ({ children }) => (

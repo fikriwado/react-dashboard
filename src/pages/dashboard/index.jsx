@@ -4,7 +4,7 @@ import Header from '../../components/header'
 import Card from '../../components/card'
 import Button from '../../components/button'
 import Devider from '../../components/devider'
-import { creditCard, balance } from '../../assets'
+import { creditCard, logoCreditCard, balance } from '../../assets'
 import { IconChevronDown } from '@tabler/icons-react'
 import {
   BarChart,
@@ -89,12 +89,33 @@ const Dashboard = () => {
             </Card>
           </div>
           <div className='react-dashboard__credit-card'>
-            <img src={creditCard} style={{ width: '100%' }} alt='credit card' />
+            <Card backgroundImage={creditCard}>
+              <Card.Body hasNoSpace>
+                <div className='credit-card__content'>
+                  <img
+                    src={logoCreditCard}
+                    alt='logo credit card'
+                    className='credit-card__logo'
+                  />
+                  <div className='credit-card__info'>
+                    <div>
+                      <p className='credit-card__info--number'>****1234</p>
+                      <p className='credit-card__info--name'>
+                        Moch Fikri Khoirurrizal
+                      </p>
+                    </div>
+                    <div>
+                      <p className='credit-card__info--expired'>08/12</p>
+                    </div>
+                  </div>
+                </div>
+              </Card.Body>
+            </Card>
           </div>
         </div>
 
         <div className='react-row'>
-          <Card hasOtherBody>
+          <Card>
             <Card.MultiBody>
               <Card.Body>
                 <Card.Title>Example</Card.Title>

@@ -12,6 +12,11 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  &.r-background-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
   &.r-has-border {
     border: 2px solid $react-color-gray-low;
   }
@@ -42,6 +47,9 @@
     width: 100%;
     box-sizing: border-box;
     flex: 1;
+    &.r-has-no-space {
+      --react-card-body-padding: 0;
+    }
   }
   &__multibody {
     display: flex;
