@@ -15,8 +15,14 @@
     .balance-statistics {
       display: flex;
       height: 100%;
+      @include mobile {
+        flex-direction: column;
+        & > :not(:last-child) {
+          margin-bottom: $react-spacing-m;
+        }
+      }
       &__info {
-        flex: 0 0 130px;
+        flex: 0 0 27%;
         & > :not(:last-child) {
           margin-bottom: $react-spacing-s;
         }
@@ -46,6 +52,11 @@
       }
       &__bar {
         flex: 1;
+        .recharts-responsive-container {
+          @include mobile {
+            min-height: 150px !important;
+          }
+        }
       }
     }
     .statistics__bar {
