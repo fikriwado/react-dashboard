@@ -48,7 +48,7 @@ img {
 
 .react-row {
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   @include mobile {
     flex-direction: column;
   }

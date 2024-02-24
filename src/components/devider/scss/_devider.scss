@@ -4,4 +4,9 @@
 .react-devider {
   margin: $react-devider-spacing-margin;
   border-bottom: 1px solid #eeebeb;
+
+  &.r-has-no-x-space {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }

@@ -8,6 +8,10 @@
 
   background-color: $react-color-white-default;
   border-radius: $react-size-30;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   &.r-has-border {
     border: 2px solid $react-color-gray-low;
   }
@@ -35,6 +39,9 @@
   }
   &__body {
     padding: var(--react-card-body-padding);
+    width: 100%;
+    box-sizing: border-box;
+    flex: 1;
   }
   &__multibody {
     display: flex;

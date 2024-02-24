@@ -12,6 +12,50 @@
         height: $react-size-50;
       }
     }
+    .balance-statistics {
+      display: flex;
+      height: 100%;
+      &__info {
+        flex: 0 0 130px;
+        & > :not(:last-child) {
+          margin-bottom: $react-spacing-s;
+        }
+        &--total {
+          font-size: $react-font-size-80;
+          font-weight: 600;
+        }
+      }
+      &__total {
+        display: flex;
+        align-items: center;
+        &-img {
+          width: 40px;
+          margin-right: $react-spacing-ms;
+        }
+        &-label {
+          color: $react-color-dark-med;
+          font-weight: 500;
+        }
+      }
+      &__total-label,
+      &__desc {
+        font-size: $react-font-size-30;
+      }
+      &__desc {
+        color: $react-color-gray-med;
+      }
+      &__bar {
+        flex: 1;
+      }
+    }
+    .statistics__bar {
+      &--primary {
+        fill: $react-color-purple-high;
+      }
+      &--secondary {
+        fill: $react-color-purple-med;
+      }
+    }
   }
   &__credit-card {
     @include desktop {
