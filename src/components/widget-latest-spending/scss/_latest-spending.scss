@@ -1,0 +1,41 @@
+@import '../../../scss/tokens';
+
+.react-latest-spending {
+  &__item {
+    display: flex;
+    align-items: center;
+    padding-bottom: $react-size-30;
+    &:not(:last-child) {
+      margin-bottom: $react-size-30;
+      border-bottom: 1px solid $react-color-gray-low;
+    }
+    & > * {
+      margin-right: $react-size-50;
+    }
+    &--img {
+      width: $react-size-110;
+      height: $react-size-110;
+      border-radius: 100%;
+    }
+    .label {
+      font-weight: 500;
+    }
+    .time {
+      font-size: $react-font-size-20;
+      color: $react-color-gray-med;
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    a {
+      display: flex;
+      align-items: center;
+      color: $react-color-purple-high;
+      & > :not(:last-child) {
+        margin-right: $react-spacing-s;
+      }
+    }
+  }
+}

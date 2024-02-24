@@ -7,6 +7,10 @@ body {
   height: -webkit-fill-available;
 }
 
+a {
+  text-decoration: none;
+}
+
 .react-app {
   overflow: hidden;
   @include tablet {

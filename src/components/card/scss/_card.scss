@@ -26,6 +26,12 @@
     }
     &.r-large {
       font-size: $react-font-size-50;
+      --react-card-title-padding: #{$react-card-spacing-padding-title-l};
+    }
+    &.r-has-action {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
     }
   }
   &__body {

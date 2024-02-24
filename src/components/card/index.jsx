@@ -6,11 +6,12 @@ const Index = ({ children, hasBorder }) => (
   </div>
 )
 
-const Title = ({ children, size = 'medium', align }) => {
+const Title = ({ children, size = 'medium', align, hasAction }) => {
   const cardTitleClasses = []
 
   if (size) cardTitleClasses.push(`r-${size}`)
   if (align) cardTitleClasses.push(`r-text-${align}`)
+  if (hasAction) cardTitleClasses.push(`r-has-action`)
 
   const classNames = Object.values(cardTitleClasses).join(' ')
 

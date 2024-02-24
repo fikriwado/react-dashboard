@@ -16,6 +16,10 @@
   border-color: transparent;
   transition: 0.3s;
   cursor: pointer;
+  &.r-small {
+    --react-button-width: #{$react-size-70};
+    --react-button-height: #{$react-size-70};
+  }
   &.r-large {
     --react-button-width: #{$react-size-100};
     --react-button-height: #{$react-size-100};
