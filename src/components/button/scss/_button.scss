@@ -2,7 +2,6 @@
 @import './tokens/default';
 
 .react-button {
-  --react-button-width: 100%;
   --react-button-height: #{$react-size-80};
   --react-button-border-radius: #{$react-size-20};
 
@@ -19,7 +18,16 @@
   cursor: pointer;
   font-size: $react-font-size-40;
   font-family: 'Poppins', sans-serif;
-
+  & > :not(:last-child) {
+    margin-right: calc($react-spacing-s / 2);
+  }
+  &:not(.r-circle) {
+    padding: 0 $react-spacing-m;
+    box-sizing: border-box;
+  }
+  &.r-full-width {
+    --react-button-width: 100%;
+  }
   &.r-small {
     --react-button-width: #{$react-size-70};
     --react-button-height: #{$react-size-70};
@@ -50,6 +58,13 @@
   &.r-purple-low {
     --react-button-background: #{$react-color-purple-low};
     --react-button-color: #{$react-color-purple-high};
+    &:hover {
+      --react-button-background: #{$react-color-gray-low};
+    }
+  }
+  &.r-light {
+    --react-button-background: #{$react-color-light-default};
+    --react-button-color: #{$react-color-dark-high};
     &:hover {
       --react-button-background: #{$react-color-gray-low};
     }

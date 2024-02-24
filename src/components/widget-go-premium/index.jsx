@@ -17,7 +17,9 @@ const Index = () => (
             Update your account to premium to get more features.
           </p>
         </div>
-        <Button color='purple'>Button</Button>
+        <Button color='purple' fullWidth>
+          Button
+        </Button>
       </div>
     </Card.Body>
   </Card>

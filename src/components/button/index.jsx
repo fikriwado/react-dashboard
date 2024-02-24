@@ -5,6 +5,8 @@ const Index = ({
   color,
   size = 'medium',
   isCircle = false,
+  fullWidth,
+  className,
   ...props
 }) => {
   const buttonClasses = []
@@ -12,6 +14,8 @@ const Index = ({
   if (size) buttonClasses.push(`r-${size}`)
   if (isCircle) buttonClasses.push('r-circle')
   if (color) buttonClasses.push(`r-${color}`)
+  if (fullWidth) buttonClasses.push('r-full-width')
+  if (className) buttonClasses.push(className)
 
   const classNames = buttonClasses.join(' ')
 
