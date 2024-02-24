@@ -33,7 +33,7 @@
     height: calc($react-sidebar-height - 76px);
     justify-content: space-around;
     padding: calc($react-spacing-m - $react-spacing-ms) 0;
-    border-top: 1px solid $react-color-gray-default;
+    border-top: 1px solid $react-color-gray-low;
 
     &.active {
       transform: translateX(0);

@@ -9,7 +9,7 @@
   background-color: $react-color-white-default;
   border-radius: $react-size-30;
   &.r-has-border {
-    border: 2px solid $react-color-gray-default;
+    border: 2px solid $react-color-gray-low;
   }
   &__title {
     padding: var(--react-card-title-padding);
@@ -36,18 +36,18 @@
     @include mobile {
       flex-direction: column;
       & > :not(:first-child) {
-        border-top: 1px solid $react-color-gray-default;
+        border-top: 1px solid $react-color-gray-low;
       }
       & > :not(:last-child) {
-        border-bottom: 1px solid $react-color-gray-default;
+        border-bottom: 1px solid $react-color-gray-low;
       }
     }
     @include tablet {
       & > :not(:first-child) {
-        border-left: 1px solid $react-color-gray-default;
+        border-left: 1px solid $react-color-gray-low;
       }
       & > :not(:last-child) {
-        border-right: 1px solid $react-color-gray-default;
+        border-right: 1px solid $react-color-gray-low;
       }
     }
     .react-card__title {

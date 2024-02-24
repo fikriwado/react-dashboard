@@ -1,0 +1,61 @@
+@import '../../../scss/tokens';
+
+.react-expanse-income {
+  &__percentage {
+    position: relative;
+    display: flex;
+    & > * {
+      flex: 1;
+    }
+    &::before {
+      content: 'vs';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $react-color-white-default;
+      font-weight: 500;
+    }
+    &--expanse {
+      border-right: 1px solid $react-color-gray-low;
+    }
+    &--income {
+      border-left: 1px solid $react-color-gray-low;
+      text-align: right;
+    }
+    &--expanse,
+    &--income {
+      .label,
+      .percentage {
+        font-weight: 500;
+      }
+      .percentage {
+        font-size: $react-font-size-60;
+      }
+      .total {
+        font-size: $react-font-size-20;
+        color: $react-color-gray-med;
+      }
+    }
+  }
+  &__progressbar {
+    display: flex;
+    margin-top: $react-spacing-ms;
+    height: $react-size-60;
+    & > :not(:last-child) {
+      margin-right: $react-size-20;
+    }
+    &--item {
+      height: 100%;
+      border-radius: $react-size-10;
+      width: var(--progressbar-width);
+
+      &.r-purple {
+        background-color: $react-color-purple-high;
+      }
+      &.r-orange {
+        background-color: $react-color-orange-high;
+      }
+    }
+  }
+}

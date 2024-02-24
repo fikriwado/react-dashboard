@@ -33,6 +33,7 @@
     color: $react-color-purple-high;
     border: 2px solid transparent;
     transition: 0.3s;
+    cursor: pointer;
     &:hover {
       background-color: $react-color-purple-low;
       border-color: $react-color-purple-med;
