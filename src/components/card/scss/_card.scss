@@ -13,13 +13,13 @@
   }
   &__title {
     padding: var(--react-card-title-padding);
+    &.r-small,
     &.r-medium,
     &.r-large {
-      font-weight: 600;
+      font-weight: 500;
     }
     &.r-small {
       font-size: $react-font-size-30;
-      font-weight: 500;
     }
     &.r-medium {
       font-size: $react-font-size-40;
