@@ -1,15 +1,18 @@
+@import '../../../scss/responsive-mixin-helper';
 @import '../../../scss/tokens';
 @import './tokens/default';
 
 .react-card {
+  --react-card-title-padding: #{$react-card-spacing-padding-title};
+  --react-card-body-padding: #{$react-card-spacing-padding-body};
+
   background-color: $react-color-white-default;
-  padding: $react-card-spacing-padding;
   border-radius: $react-size-30;
   &.r-has-border {
     border: 2px solid $react-color-gray-default;
   }
   &__title {
-    margin-bottom: $react-spacing-s;
+    padding: var(--react-card-title-padding);
     &.r-medium,
     &.r-large {
       font-weight: 600;
@@ -23,6 +26,36 @@
     }
     &.r-large {
       font-size: $react-font-size-50;
+    }
+  }
+  &__body {
+    padding: var(--react-card-body-padding);
+  }
+  &__multibody {
+    display: flex;
+    @include mobile {
+      flex-direction: column;
+      & > :not(:first-child) {
+        border-top: 1px solid $react-color-gray-default;
+      }
+      & > :not(:last-child) {
+        border-bottom: 1px solid $react-color-gray-default;
+      }
+    }
+    @include tablet {
+      & > :not(:first-child) {
+        border-left: 1px solid $react-color-gray-default;
+      }
+      & > :not(:last-child) {
+        border-right: 1px solid $react-color-gray-default;
+      }
+    }
+    .react-card__title {
+      --react-card-title-padding: 0;
+      margin-bottom: $react-spacing-s;
+    }
+    .react-card__body {
+      --react-card-body-padding: #{$react-card-spacing-padding};
     }
   }
 }

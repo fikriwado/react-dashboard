@@ -19,7 +19,6 @@
   }
   @include tablet {
     position: absolute;
-    // top: 0;
     right: -380px;
     padding: $react-widget-spacing-padding-tablet;
     &.r-active {

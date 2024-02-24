@@ -1,4 +1,4 @@
-import Dashboard from './Dashboard'
+import Dashboard from './dashboard'
 import Notification from './Notification'
 import Schedule from './Schedule'
 import Users from './Users'

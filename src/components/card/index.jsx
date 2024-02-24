@@ -21,7 +21,12 @@ const Body = ({ children }) => (
   <div className='react-card__body'>{children}</div>
 )
 
+const MultiBody = ({ children }) => (
+  <div className='react-card__multibody'>{children}</div>
+)
+
 Index.Title = Title
 Index.Body = Body
+Index.MultiBody = MultiBody
 
 export default Index

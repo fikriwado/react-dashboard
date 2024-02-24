@@ -28,3 +28,22 @@ body {
     margin-bottom: $react-size-60;
   }
 }
+
+.react-row {
+  display: flex;
+  flex-wrap: wrap;
+  @include mobile {
+    flex-direction: column;
+  }
+  & > * {
+    flex: 1;
+  }
+  & > :not(:last-child) {
+    @include mobile {
+      margin-bottom: $react-size-60;
+    }
+    @include tablet {
+      margin-right: $react-size-60;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import '../../../scss/responsive-mixin-helper';
+@import '../../../scss/tokens';
+
+.react-dashboard {
+  & > :not(:last-child) {
+    margin-bottom: $react-size-60;
+  }
+  &__credit-card {
+    @include desktop {
+      flex: 0 0 45%;
+      max-width: 45%;
+    }
+  }
+  &__analytics {
+    @include desktop {
+      flex: 0 0 35%;
+      max-width: 35%;
+    }
+  }
+}
