@@ -48,7 +48,6 @@ img {
 
 .react-row {
   display: flex;
-  // flex-wrap: wrap;
   @include mobile {
     flex-direction: column;
   }
@@ -61,6 +60,16 @@ img {
     }
     @include tablet {
       margin-right: $react-size-60;
+    }
+  }
+
+  &.tablet-column {
+    @include tablet-only {
+      flex-direction: column;
+      & > :not(:last-child) {
+        margin-right: auto;
+        margin-bottom: $react-size-60;
+      }
     }
   }
 }

@@ -6,6 +6,10 @@
     margin-bottom: $react-size-60;
   }
   &__balance-statistics {
+    @include tablet-and-under {
+      order: 2;
+      margin-bottom: 0 !important;
+    }
     .stats-btn-filter {
       svg {
         width: $react-size-50;
@@ -19,6 +23,17 @@
         flex-direction: column;
         & > :not(:last-child) {
           margin-bottom: $react-spacing-m;
+        }
+      }
+      &__wrapper {
+        @include mobile {
+          min-height: 150px;
+        }
+        @include tablet {
+          max-height: 200px;
+        }
+        @include desktop {
+          min-height: 250px;
         }
       }
       &__info {
@@ -52,11 +67,6 @@
       }
       &__bar {
         flex: 1;
-        .recharts-responsive-container {
-          @include mobile {
-            min-height: 150px !important;
-          }
-        }
       }
     }
     .statistics__bar {
@@ -69,11 +79,10 @@
     }
   }
   &__credit-card {
-    @include tablet {
-      flex: 0 0 40%;
-      max-width: 40%;
+    @include tablet-and-under {
+      order: 1;
+      margin-bottom: $react-size-60;
     }
-
     @include desktop {
       flex: 0 0 35%;
       max-width: 35%;
@@ -93,7 +102,10 @@
         padding: $react-spacing-m;
         box-sizing: border-box;
         @include mobile {
-          min-height: 150px;
+          min-height: 180px;
+        }
+        @include tablet {
+          min-height: 200px;
         }
       }
       &__info {

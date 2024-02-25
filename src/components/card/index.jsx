@@ -1,10 +1,17 @@
 import './scss/_card.scss'
 
-const Index = ({ children, hasBorder, backgroundImage, ...props }) => {
+const Index = ({
+  children,
+  hasBorder,
+  backgroundImage,
+  fullHeight,
+  ...props
+}) => {
   const cardClasses = []
 
   if (hasBorder) cardClasses.push('r-has-border')
   if (backgroundImage) cardClasses.push('r-background-image')
+  if (fullHeight) cardClasses.push('r-full-height')
 
   const classNames = Object.values(cardClasses).join(' ')
 

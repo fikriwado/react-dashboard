@@ -31,9 +31,9 @@ const Dashboard = () => {
         desc='View and control your finances here!'
       />
       <div className='react-dashboard'>
-        <div className='react-row'>
+        <div className='react-row tablet-column'>
           <div className='react-dashboard__balance-statistics'>
-            <Card>
+            <Card fullHeight>
               <Card.Title hasAction>
                 <p>Balance statistics</p>
                 <Button
@@ -67,9 +67,9 @@ const Dashboard = () => {
                     <ResponsiveContainer
                       width='100%'
                       height='100%'
-                      minHeight={'50px'}
+                      className='balance-statistics__wrapper'
                     >
-                      <BarChart width={500} height={400} data={data}>
+                      <BarChart width={150} height={40} data={data}>
                         <XAxis dataKey='name' />
                         <YAxis />
                         <Tooltip />
@@ -89,7 +89,7 @@ const Dashboard = () => {
             </Card>
           </div>
           <div className='react-dashboard__credit-card'>
-            <Card backgroundImage={creditCard}>
+            <Card backgroundImage={creditCard} fullHeight>
               <Card.Body hasNoSpace>
                 <div className='credit-card__content'>
                   <img
