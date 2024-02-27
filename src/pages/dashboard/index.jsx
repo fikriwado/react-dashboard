@@ -4,11 +4,13 @@ import Header from '../../components/header'
 import Card from '../../components/card'
 import Button from '../../components/button'
 import Devider from '../../components/devider'
-import { creditCard, logoCreditCard, balance } from '../../assets'
+import { creditCard, logoCreditCard, balance, avatar01 } from '../../assets'
 import {
   IconChevronDown,
   IconPlus,
-  IconDotsVertical
+  IconDotsVertical,
+  IconMoodSmile,
+  IconPaperclip
 } from '@tabler/icons-react'
 import {
   BarChart,
@@ -232,10 +234,43 @@ const Dashboard = () => {
               </Card.Body>
               <Card.Body>
                 <Card.Title>Esther Howards</Card.Title>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
-                suscipit mollitia facere debitis ut minus porro. Vitae quas
-                quibusdam placeat. Porro perferendis laboriosam unde, non
-                dolores rem aut reprehenderit. Porro!
+                <div className='react-dashboard__chat'>
+                  <div className='react-dashboard__chat--message'>
+                    <div className='react-dashboard__chat--message-right'>
+                      <div className='chat-message'>Are you ready?</div>
+                      <div className='chat-profile'>
+                        <img src={avatar01} alt='profile' />
+                      </div>
+                    </div>
+                    <div className='react-dashboard__chat--message-left'>
+                      <div className='chat-profile'>
+                        <img src={avatar01} alt='profile' />
+                      </div>
+                      <div className='chat-message'>
+                        I have prepared everything
+                      </div>
+                    </div>
+                  </div>
+                  <div className='react-dashboard__chat--typing'>
+                    <textarea
+                      className='react-dashboard__chat--typing-input'
+                      placeholder='Type your message'
+                    ></textarea>
+                    <div className='react-dashboard__chat--typing-footer'>
+                      <div className='footer-left'>
+                        <Button color='transparent' size='small' isCircle>
+                          <IconMoodSmile />
+                        </Button>
+                        <Button color='transparent' size='small' isCircle>
+                          <IconPaperclip />
+                        </Button>
+                      </div>
+                      <Button color='purple' size='small'>
+                        Send now
+                      </Button>
+                    </div>
+                  </div>
+                </div>
               </Card.Body>
             </Card.MultiBody>
           </Card>

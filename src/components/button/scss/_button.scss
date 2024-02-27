@@ -73,4 +73,11 @@
       --react-button-background: #{$react-color-gray-low};
     }
   }
+  &.r-transparent {
+    --react-button-background: transparent;
+    --react-button-color: #{$react-color-dark-high};
+    &:hover {
+      --react-button-background: #{$react-color-gray-low};
+    }
+  }
 }

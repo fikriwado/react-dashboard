@@ -163,6 +163,9 @@
       }
     }
     &--lists {
+      & > :not(:last-child) {
+        margin-bottom: $react-spacing-m;
+      }
       & * {
         font-size: $react-font-size-30;
         font-weight: 500;
@@ -183,9 +186,6 @@
         display: flex;
         align-items: start;
         flex-wrap: wrap;
-        // & > :not(:last-child) {
-        //   margin-right: $react-spacing-ms;
-        // }
         &-list {
           flex: 0 0 calc(50% - calc($react-spacing-ms / 2));
           display: flex;
@@ -216,6 +216,92 @@
           }
           .react-button {
             color: $react-color-dark-high;
+          }
+        }
+      }
+    }
+  }
+  &__chat {
+    &--message {
+      & > * {
+        display: flex;
+        align-items: center;
+        margin-bottom: $react-spacing-l;
+        & > :not(:last-child) {
+          margin-right: $react-spacing-ms;
+        }
+      }
+      &-left {
+        .chat-message {
+          background-color: $react-color-purple-low;
+          border-radius: $react-size-20 $react-size-20 $react-size-20 0;
+        }
+      }
+      &-right {
+        justify-content: end;
+        .chat-message {
+          background-color: $react-color-purple-high;
+          border-radius: $react-size-20 $react-size-20 0 $react-size-20;
+          color: $react-color-white-default;
+        }
+      }
+      .chat-message {
+        display: flex;
+        align-items: center;
+        height: $react-size-90;
+        padding: $react-spacing-m;
+        box-sizing: border-box;
+        font-size: $react-font-size-30;
+      }
+      .chat-profile {
+        line-height: 0;
+        img {
+          width: $react-size-90;
+          height: $react-size-90;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+      }
+    }
+    &--typing {
+      background-color: $react-color-purple-low;
+      border-radius: $react-size-20;
+      padding: $react-spacing-ms;
+      &-input {
+        width: 100%;
+        max-width: 100%;
+        resize: none;
+        background-color: transparent;
+        border: 0;
+        outline: none;
+        padding: 0 $react-spacing-s;
+        font-size: $react-font-size-30;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+        &::-webkit-scrollbar {
+          width: 6px;
+        }
+        &::-webkit-scrollbar-track,
+        &::-webkit-scrollbar-thumb {
+          border-radius: 50px;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: $react-color-gray-low;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: $react-color-gray-med;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+          background-color: darken($react-color-gray-med, 10%);
+        }
+      }
+      &-footer {
+        display: flex;
+        justify-content: space-between;
+        .footer-left {
+          display: flex;
+          & > :not(:last-child) {
+            margin-right: calc($react-spacing-s / 2);
           }
         }
       }
