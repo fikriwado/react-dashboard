@@ -29,8 +29,12 @@
     --react-button-width: 100%;
   }
   &.r-small {
-    --react-button-width: #{$react-size-70};
+    font-size: $react-font-size-30;
     --react-button-height: #{$react-size-70};
+    &.r-circle {
+      --react-button-width: #{$react-size-70};
+      --react-button-height: #{$react-size-70};
+    }
   }
   &.r-large {
     --react-button-width: #{$react-size-100};

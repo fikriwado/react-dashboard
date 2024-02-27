@@ -5,7 +5,11 @@ import Card from '../../components/card'
 import Button from '../../components/button'
 import Devider from '../../components/devider'
 import { creditCard, logoCreditCard, balance } from '../../assets'
-import { IconChevronDown } from '@tabler/icons-react'
+import {
+  IconChevronDown,
+  IconPlus,
+  IconDotsVertical
+} from '@tabler/icons-react'
 import {
   BarChart,
   Bar,
@@ -118,14 +122,116 @@ const Dashboard = () => {
           <Card>
             <Card.MultiBody>
               <Card.Body>
-                <Card.Title>Example</Card.Title>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
-                suscipit mollitia facere debitis ut minus porro. Vitae quas
-                quibusdam placeat. Porro perferendis laboriosam unde, non
-                dolores rem aut reprehenderit. Porro!
+                <Card.Title>LIst of items to buy</Card.Title>
+                <div className='react-dashboard__items-buy'>
+                  <div className='react-dashboard__items-buy--times'>
+                    <div className='items-buy__times--time'>
+                      <div className='items-buy__times--time-clock'>02:00</div>
+                      <div className='items-buy__times--time-date'>
+                        Sat, August 12
+                      </div>
+                    </div>
+                    <div className='items-buy__times--time'>
+                      <div className='items-buy__times--time-clock'>05:00</div>
+                      <div className='items-buy__times--time-date'>
+                        Sat, September 12
+                      </div>
+                    </div>
+                  </div>
+                  <div className='react-dashboard__items-buy--lists'>
+                    <div className='items-buy__lists--total'>
+                      <div className='items-buy__lists--total-label'>
+                        <span className='label-count'>0/3</span> Shipping
+                      </div>
+                      <div className='items-buy__lists--total-action'>
+                        <Button
+                          color='white'
+                          size='small'
+                          onClick={() => alert('Add an item clicked')}
+                        >
+                          <IconPlus /> <span>Add an item</span>
+                        </Button>
+                      </div>
+                    </div>
+                    <div className='items-buy__lists--items'>
+                      <div className='items-buy__lists--items-list'>
+                        <div className='list-checkbox'>
+                          <input id='mackbook' type='checkbox' />
+                          <label htmlFor='mackbook'>Mackbook</label>
+                        </div>
+                        <div className='list-action'>
+                          <Button
+                            color='purple-low'
+                            size='small'
+                            isCircle
+                            onClick={() =>
+                              alert('Latest spending widget clicked')
+                            }
+                          >
+                            <IconDotsVertical />
+                          </Button>
+                        </div>
+                      </div>
+                      <div className='items-buy__lists--items-list'>
+                        <div className='list-checkbox'>
+                          <input id='bicycle' type='checkbox' />
+                          <label htmlFor='bicycle'>Bicycle</label>
+                        </div>
+                        <div className='list-action'>
+                          <Button
+                            color='purple-low'
+                            size='small'
+                            isCircle
+                            onClick={() =>
+                              alert('Latest spending widget clicked')
+                            }
+                          >
+                            <IconDotsVertical />
+                          </Button>
+                        </div>
+                      </div>
+                      <div className='items-buy__lists--items-list'>
+                        <div className='list-checkbox'>
+                          <input id='motorcycle' type='checkbox' />
+                          <label htmlFor='motorcycle'>Motorcycle</label>
+                        </div>
+                        <div className='list-action'>
+                          <Button
+                            color='purple-low'
+                            size='small'
+                            isCircle
+                            onClick={() =>
+                              alert('Latest spending widget clicked')
+                            }
+                          >
+                            <IconDotsVertical />
+                          </Button>
+                        </div>
+                      </div>
+                      <div className='items-buy__lists--items-list'>
+                        <div className='list-checkbox'>
+                          <input id='iphone' type='checkbox' />
+                          <label htmlFor='iphone'>Iphone 14 pro max</label>
+                        </div>
+                        <div className='list-action'>
+                          <Button
+                            color='purple-low'
+                            size='small'
+                            isCircle
+                            onClick={() =>
+                              alert('Latest spending widget clicked')
+                            }
+                          >
+                            <IconDotsVertical />
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </Card.Body>
               <Card.Body>
-                <Card.Title>Example</Card.Title>
+                <Card.Title>Esther Howards</Card.Title>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
                 suscipit mollitia facere debitis ut minus porro. Vitae quas
                 quibusdam placeat. Porro perferendis laboriosam unde, non

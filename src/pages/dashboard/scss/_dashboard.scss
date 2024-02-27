@@ -132,4 +132,93 @@
       max-width: 30%;
     }
   }
+  &__items-buy {
+    & > :not(:last-child) {
+      margin-bottom: $react-spacing-m;
+    }
+    &--times {
+      display: flex;
+      .items-buy__times--time {
+        &:not(:last-child) {
+          position: relative;
+          margin-right: 80px;
+          &::before {
+            content: '>';
+            position: absolute;
+            top: 50%;
+            right: -45px;
+            font-size: $react-font-size-70;
+            transform: translateY(-50%);
+            color: $react-color-gray-med;
+          }
+        }
+        &-clock {
+          font-size: $react-font-size-60;
+          font-weight: 600;
+        }
+        &-date {
+          font-size: $react-font-size-20;
+          color: $react-color-gray-med;
+        }
+      }
+    }
+    &--lists {
+      & * {
+        font-size: $react-font-size-30;
+        font-weight: 500;
+      }
+      & svg {
+        width: $react-size-40;
+        height: $react-size-40;
+      }
+      .label-count {
+        font-weight: 400;
+      }
+      .items-buy__lists--total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .items-buy__lists--items {
+        display: flex;
+        align-items: start;
+        flex-wrap: wrap;
+        // & > :not(:last-child) {
+        //   margin-right: $react-spacing-ms;
+        // }
+        &-list {
+          flex: 0 0 calc(50% - calc($react-spacing-ms / 2));
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: $react-color-purple-low;
+          padding: calc($react-spacing-s / 2) $react-spacing-s;
+          box-sizing: border-box;
+          border-radius: $react-size-20;
+          font-size: $react-font-size-50 !important;
+          &:not(:nth-child(2n)) {
+            margin-right: $react-spacing-ms;
+          }
+          &:not(:nth-last-child(-n + 2)) {
+            margin-bottom: $react-spacing-ms;
+          }
+          .list-checkbox {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            & > :not(:last-child) {
+              margin-right: $react-spacing-s;
+            }
+            label {
+              cursor: pointer;
+              flex: 1;
+            }
+          }
+          .react-button {
+            color: $react-color-dark-high;
+          }
+        }
+      }
+    }
+  }
 }
