@@ -118,11 +118,23 @@ const Dashboard = () => {
           <Card>
             <Card.MultiBody>
               <Card.Body>
-                <Card.Title>Example</Card.Title>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
-                suscipit mollitia facere debitis ut minus porro. Vitae quas
-                quibusdam placeat. Porro perferendis laboriosam unde, non
-                dolores rem aut reprehenderit. Porro!
+                <Card.Title>Information</Card.Title>
+                <div className='react-info'>
+                  <p>
+                    I have continued this job because I find it interesting.
+                  </p>
+                  <Button
+                    color='purple'
+                    onClick={() =>
+                      window.open(
+                        'https://clean-dashboard.vercel.app/',
+                        '_blank'
+                      )
+                    }
+                  >
+                    Check Continued Version
+                  </Button>
+                </div>
               </Card.Body>
               <Card.Body>
                 <Card.Title>Example</Card.Title>

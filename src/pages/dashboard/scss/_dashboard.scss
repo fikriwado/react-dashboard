@@ -132,4 +132,13 @@
       max-width: 30%;
     }
   }
+  .react-info {
+    p {
+      background-color: $react-color-purple-low;
+      margin-bottom: $react-spacing-m;
+      padding: $react-spacing-l;
+      font-weight: 500;
+      text-decoration: underline;
+    }
+  }
 }
